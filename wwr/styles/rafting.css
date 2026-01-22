@@ -1,6 +1,5 @@
 :root{
   --primary-color: #0b2540;     /* deep navy */
-  --secondary-color: #1e90ff;   /* bright blue */
   --accent1-color: #ff6a00;     /* orange */
   --accent2-color: #f2f2f2;     /* light gray */
   --heading-font: Arial, sans-serif;
@@ -104,6 +103,7 @@ h1, h2{
   background: rgba(255, 255, 255, 0.8);
   padding: 16px;
   color: var(--primary-color);
+  border-color: var(--accent1-color)
 }
 
 /* required style for the article image (float) */
