@@ -1,16 +1,22 @@
+:root {
+    --dark-blue: #003366;
+    --light-blue: #66ccff;
+    --white: #ffffff;
+}
+
 nav {
-    background-color: darkblue;
+    background-color: var(--dark-blue);
     padding: 10px;
 }
 
 nav a {
-    color: white;
+    color: var(--white);
     display: block;
     padding: 20px;
 }
 
 h1 {
-    color: darkblue;
+    color: var(--dark-blue);
 }
 
 img {

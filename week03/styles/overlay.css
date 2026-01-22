@@ -17,7 +17,7 @@ h1 {
       
 .herodiv {
   margin: 10px auto;
-  position: ; /* If removed, what happens? it moves to the bottom left of the page instead of the container */
+  position: relative; /* If removed, what happens? it moves to the bottom left of the page instead of the container */
 }
       
 .herodiv img {
