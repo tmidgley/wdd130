@@ -1,10 +1,10 @@
 :root{
-  --primary-color: #0b3d5c;    /* deep river blue */
-  --secondary-color: #1e90ff;  /* bright water blue */
-  --accent1-color: #ff6a00;    /* adrenaline orange */
-  --accent2-color: #f2f2f2;    /* light background */
-  --heading-font: "Trebuchet MS", sans-serif;
-  --body-font: Verdana, sans-serif;
+  --primary-color: #0b2540;     /* deep navy */
+  --secondary-color: #1e90ff;   /* bright blue */
+  --accent1-color: #ff6a00;     /* orange */
+  --accent2-color: #f2f2f2;     /* light gray */
+  --heading-font: Arial, sans-serif;
+  --body-font: Arial, sans-serif;
 }
 
 /* required reset */
@@ -17,74 +17,62 @@
 body{
   font-family: var(--body-font);
   color: #222;
-  line-height: 1.5;
   background: var(--accent2-color);
+  line-height: 2;
 }
 
-/* required page width rule */
+/* required: limit width */
 header, main, footer{
   width: 840px;
   margin: 0 auto;
 }
 
-/* HEADER */
+/* header layout */
 header{
   background: var(--primary-color);
+  padding: 12px 16px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 12px 16px;
 }
 
 header img{
   display: block;
 }
 
-/* NAV */
+/* nav - remove bullets and align links */
 nav ul{
   list-style: none;
   display: flex;
-  gap: 12px;
+  gap: 14px;
 }
 
 nav a{
   color: white;
   text-decoration: none;
   font-family: var(--heading-font);
+  font-size: 1.25rem;
   font-weight: bold;
   padding: 6px 10px;
 }
 
-nav a:hover{
-  text-decoration: underline;
-}
 
-/* HEADINGS */
+/* headings */
 h1, h2{
   font-family: var(--heading-font);
-  color: white;
 }
 
-/* MAIN (so the hero image can be behind everything) */
-main{
-  position: relative;
-  min-height: 900px; /* gives room for background image */
-  padding: 20px;
-  overflow: hidden;
-}
-
-/* HERO IMAGE AS PAGE BACKGROUND */
+/* ===== HERO OVERLAY ===== */
 .hero{
-  position: absolute;
-  inset: 0; /* top:0 right:0 bottom:0 left:0 */
-  z-index: 0;
+  position: relative;
+  margin-top: 16px;
 }
 
+/* hero image fills the hero area */
 .hero img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+  display: block;     
+  width: 100%;        
+  height: auto;       
 }
 
 /* dark overlay so text is readable */
@@ -92,32 +80,72 @@ main{
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.55);
+  background: rgba(0,0,0,0.1);
 }
 
-/* CONTENT ON TOP OF HERO BACKGROUND */
-main > h1,
-main > section,
-main > .content,
-.hero h1,
-.hero article{
-  position: relative;
-  z-index: 1;
-}
-
-/* HERO TITLE OVER BACKGROUND */
+/* overlay title */
 .hero h1{
-  margin-top: 10px;
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  top: 0px;
   text-align: center;
-  padding: 12px;
-  background: rgba(0,0,0,0.35);
+  padding: 5px;
+  color: var(--accent2-color);
+  background: rgba(0,0,0,0.6);
 }
 
-/* ARTICLE CARD */
+/* overlay article */
 .hero article{
-  margin: 20px auto;
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  background: rgba(255, 255, 255, 0.8);
   padding: 16px;
-  background: rgba(255,255,255,0.85);
-  color: #111;
-  width: 95%;
-  border: 2px
+  color: var(--primary-color);
+}
+
+/* required style for the article image (float) */
+.hero article img{
+  float: right;
+  width: 125px;
+  height: auto;
+  margin-left: 14px;
+}
+
+/* section styling */
+section{
+  margin: 16px 0;
+  padding: 16px;
+  background: white;
+}
+
+section h2{
+  color: var(--primary-color);
+  margin-bottom: 8px;
+}
+
+/* footer */
+footer{
+  background: var(--primary-color);
+  color: white;
+  padding: 12px 16px;
+  margin-top: 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* required: remove underline from social links */
+.socialmedia a{
+  text-decoration: none;
+}
+
+.socialmedia img{
+  width: 30px;
+  height: 30px;
+  margin-left:0px;
+  margin-top: 8px;
+}
