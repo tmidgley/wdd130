@@ -456,14 +456,17 @@ header, main, footer{
   display:block;
 }
 
-/* responsive */
 @media (max-width:900px){
   .hero-img{ height:360px; }
   .history-layout{ grid-template-columns:1fr; }
   .adventure-gallery{ grid-template-columns:repeat(2, 1fr); }
-  .home-grid-layout{ grid-template-columns:1fr; }
+  .home-grid-layout{ grid-template-columns:repeat(2, 1fr); }
   .contact-grid{ grid-template-columns:1fr; }
   .hero-article{ grid-template-columns:1fr; }
+}
+
+@media (max-width:600px){
+  .home-grid-layout{ grid-template-columns:1fr; }
 }
 
 @media (max-width:560px){
